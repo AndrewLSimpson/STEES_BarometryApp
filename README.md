@@ -1,7 +1,7 @@
 # South Tees Hospitals NHS Foundation Trust Barometry App
 The Baromery 2 (version 2.3.1) web app developed by Clinical Measurement in the Medical Physics Department at The James Cook University Hospital, replaces Barometry Version 1. Barometry 2 includes the ability to read the pressure from a Druck Pace 1001 directly over ethernet. 
 
-This readme is mainly only useful for staff at south tees, but also includes some C# code which can be re-used to connect to a Druck Pace 1001 via ethernet.
+This readme is mainly only useful for staff at south tees. For an example of how to connect to a Druck Pace 1001 Barometer via ethernet in C#, click [here](https://github.com/AndrewLSimpson/Druck1001Example/blob/main/readme.md).
 
 ## What's New?
 

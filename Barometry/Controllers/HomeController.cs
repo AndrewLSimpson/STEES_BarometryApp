@@ -19,8 +19,7 @@ namespace Barometry.Controllers
     {
         public ActionResult Index()
         {
-            try
-            {
+  
                 //web scraper for main department barometer on IP 10.115.16.17
                 HtmlWeb web = new HtmlWeb();
                 //Load the html page as a document
@@ -34,7 +33,9 @@ namespace Barometry.Controllers
                 //View the Main Department Barometer
                 ViewBag.b1mBar = divContentmBar;
                 ViewBag.b1mmHg = divContentmmHg;
-                //Set viewbags for the Endeavour Unit Barometer by calling the B2EndeavourUnit method
+            //Set viewbags for the Endeavour Unit Barometer by calling the B2EndeavourUnit method
+            try
+            {
                 ViewBag.b2 = B2EndeavourUnitPressuremBar();
                 ViewBag.b2mmHg = B2EndeavourUnitPressuremmHg(B2EndeavourUnitPressuremBar());
 
@@ -42,8 +43,8 @@ namespace Barometry.Controllers
             }
             catch (Exception ex)
             {
-                ViewBag.b1mBar = "Offline";
-                ViewBag.b1mmHg = "Offline";
+                ViewBag.b2 = "Offline";
+                ViewBag.b2mmHg = "Offline";
             }
             //Return View
             return View();
